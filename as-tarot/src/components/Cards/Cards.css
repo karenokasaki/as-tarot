@@ -1,0 +1,11 @@
+.card {
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  color: rgb(68, 68, 68)
+}
+
+.cards {
+  display: grid;
+  gap: 10px;
+  margin: 10px;
+}

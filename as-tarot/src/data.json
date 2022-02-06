@@ -1,0 +1,16 @@
+
+[
+  {
+    "id": 1,
+    "cardName": "go to distance",
+    "cardNumber": 10,
+    "desc": "",
+    "oracle": "Wisdow",
+    "moreInfo": ""
+  },
+  {
+    "id": 2,
+    "cardName": "mending",
+    "cardNumber": 43
+  }
+]
