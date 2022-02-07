@@ -1,7 +1,7 @@
 
 [
   {
-    "id": 1,
+    "id": 100,
     "cardName": "go to distance",
     "cardNumber": 10,
     "desc": "",
@@ -9,7 +9,7 @@
     "moreInfo": ""
   },
   {
-    "id": 2,
+    "id": 200,
     "cardName": "mending",
     "cardNumber": 43
   }
