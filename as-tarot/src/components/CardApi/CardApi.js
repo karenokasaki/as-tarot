@@ -1,19 +1,25 @@
 
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../Cards/Cards.css'
 
 
-function CardApi({dataApi}) {
+function CardApi({ dataApi }) {
+
+    useEffect(() => {
+        
+    })
+
+
+
     return (
         <div className='cards'>
             {dataApi.map(card => {
                 return (
                     <div className='card' key={card.name_short}>
-                        <h2>{card.name}</h2>
-                        <p>Número: {card.value}</p>
-                        <p>Significado: {card.meaning_up}</p>
-                        <p>Significado ao Contrário: {card.meaning_rev}</p>
-                        {/* <p>Descrição: {card.desc}</p> */}
-
+                        <h3>{card.name}</h3>
+                        <p>Type: {card.type === 'major' ? 'Arcanjo Maior' : 'Arcanjo Menor'}</p>
+                        <Link className='btn btn-outline-warning' to={`/home/${card.name_short}`}>Abrir Carta</Link>
                     </div>
                 )
             })}
