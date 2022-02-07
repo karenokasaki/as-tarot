@@ -5,6 +5,7 @@ import Search from './components/Search/Search';
 import CardApi from './components/CardApi/CardApi'
 import Card from './components/Card/Card'
 import Layout from './components/Layout/Layout';
+import Layout3Cards from './components/Layout/Layout3Cartas';
 
 function App() {
   const [search, setSearch] = useState('')
@@ -23,7 +24,7 @@ function App() {
 
     <div className="App">
 
-      <div className='navbar'>
+      <div >
         <Search
           search={search}
           setSearch={setSearch} />
@@ -45,7 +46,11 @@ function App() {
         <Route
           path='/layout'
           exact
-          element={<Layout />} />
+          element={<Layout setSearch={setSearch} />} />
+          <Route 
+            path={`/layout/:id_layout`}
+            element={<Layout3Cards />}
+          />
       </Routes>
 
 

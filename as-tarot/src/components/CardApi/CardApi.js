@@ -8,7 +8,7 @@ function CardApi({ dataApi }) {
             {dataApi.map(card => {
                 return (
                     <div className='card' key={card.name_short}>
-                        <h3>{card.name}</h3>
+                        <h4>{card.name}</h4>
                         <p>Type: {card.type === 'major' ? 'Arcanjo Maior' : 'Arcanjo Menor'}</p>
                         <Link className='btn btn-sm btn-outline-warning' to={`/home/${card.name_short}`}>Abrir Carta</Link>
                     </div>
