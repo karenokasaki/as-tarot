@@ -2,8 +2,8 @@
 import './Cards.css'
 
 
-function Cards({data}) {
-    
+function Cards({ data }) {
+
     return (
         <div className='cards'>
             {data.map(card => {

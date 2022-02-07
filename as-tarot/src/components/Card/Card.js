@@ -9,7 +9,7 @@ const Card = ({ data, setSearch }) => {
     useEffect(() => {
         setSearch('')
     })
-    
+
     return (
         <div>
             {data
@@ -29,7 +29,6 @@ const Card = ({ data, setSearch }) => {
                 </div>
             ))
             }
-            
         </div>
     );
 }

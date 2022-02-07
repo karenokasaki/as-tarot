@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 
 function Search({ search, setSearch }) {
 
-
     return (
         <nav>
             <form className="searchForm form-control" onSubmit={(e) => { e.preventDefault() }}>

@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Route, Routes, Link } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import './App.css';
-import Cards from './components/Cards/Cards';
 import Search from './components/Search/Search';
-import data from './data.json'
 import CardApi from './components/CardApi/CardApi'
 import Card from './components/Card/Card'
 import Layout from './components/Layout/Layout';
-
-
 
 function App() {
   const [search, setSearch] = useState('')
@@ -23,20 +19,18 @@ function App() {
 
   }, [])
 
-
-
   return (
 
     <div className="App">
 
       <div className='navbar'>
-      <Search
-        search={search}
-        setSearch={setSearch} />
+        <Search
+          search={search}
+          setSearch={setSearch} />
       </div>
 
       <Routes>
-        <Route 
+        <Route
           path="/home"
           exact
           element={<CardApi
@@ -44,14 +38,14 @@ function App() {
               .filter(card =>
                 ((card.name)).toLowerCase()
                   .includes(search.toLowerCase())
-              )} />}/>
-        <Route 
+              )} />} />
+        <Route
           path={`/home/:name_short`}
-          element={<Card data={TarotApi} setSearch={setSearch}/>}/>
-        <Route 
+          element={<Card data={TarotApi} setSearch={setSearch} />} />
+        <Route
           path='/layout'
           exact
-          element={<Layout />}/>
+          element={<Layout />} />
       </Routes>
 
 
